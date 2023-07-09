@@ -64,47 +64,51 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section 
-              title="Testing Camera">
-              <Text style={styles.textblock}>Show the QR to scan</Text>
-              <Text style={styles.textblock}> . </Text>
-          
-          </Section>
-          <Section 
-              title="">
-        
-          </Section>
-
-          <Button
-            title="Read QR"
-            onPress={() => {
-              console.log('Button pressed');
-            }}
-          />
-
-
-          {/* <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section> */}
-
-          {/* <Section title="Debug">
-            <DebugInstructions />
-          </Section> */}
+      <View style={styles.screen}>
+      <SafeAreaView style={styles.saveArea}>
+        <View style={styles.header}>
+          <Text style={styles.headerText}>React Native Camera Libraries</Text>
         </View>
-      </ScrollView>
-    </SafeAreaView>
+      </SafeAreaView>
+
+      <View style={styles.caption}>
+        <Text style={styles.captionText}>
+          Welcome To React-Native-Vision-Camera Tutorial
+        </Text>
+      </View>
+    </View>
+    // <SafeAreaView style={backgroundStyle}>
+    //   <StatusBar
+    //     barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+    //     backgroundColor={backgroundStyle.backgroundColor}
+    //   />
+    //   <ScrollView
+    //     contentInsetAdjustmentBehavior="automatic"
+    //     style={backgroundStyle}>
+    //     <View
+    //       style={{
+    //         backgroundColor: isDarkMode ? Colors.black : Colors.white,
+    //       }}>
+    //       <Section 
+    //           title="Testing Camera">
+    //           <Text style={styles.textblock}>Show the QR to scan</Text>
+    //           <Text style={styles.textblock}> . </Text>
+          
+    //       </Section>
+    //       <Section 
+    //           title="">
+        
+    //       </Section>
+
+    //       <Button
+    //         title="Read QR"
+    //         onPress={() => {
+    //           console.log('Button pressed');
+    //         }}
+    //       />
+    //     </View>
+    //   </ScrollView>
+    // </SafeAreaView>
   );
 }
 
@@ -130,7 +134,37 @@ const styles = StyleSheet.create({
     marginBottom: 32,
     paddingVertical: 24,
     paddingBottom: 50
-  }
+  },
+
+
+  // Gapur styles
+  caption: {
+    height: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  captionText: {
+    color: '#100F0F',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  screen: {
+    flex: 1,
+    backgroundColor: '#EEF2E6',
+  },
+  saveArea: {
+    backgroundColor: '#3D8361',
+  },
+  header: {
+    height: 50,
+    backgroundColor: '#3D8361',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerText: {
+    color: '#ffffff',
+    fontSize: 20,
+  },
 });
 
 export default App;
