@@ -13,6 +13,7 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  Button,
   useColorScheme,
   View,
 } from 'react-native';
@@ -71,25 +72,36 @@ function App(): JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header title="Titulo"/>
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="First headder">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits. Laurent
+          <Section 
+              title="Testing Camera">
+              <Text style={styles.textblock}>Show the QR to scan</Text>
+              <Text style={styles.textblock}> . </Text>
+          
           </Section>
-          <Section title="See Your Changes">
+          <Section 
+              title="">
+        
+          </Section>
+
+          <Button
+            title="Read QR"
+            onPress={() => {
+              console.log('Button pressed');
+            }}
+          />
+
+
+          {/* <Section title="See Your Changes">
             <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
+          </Section> */}
+
+          {/* <Section title="Debug">
             <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+          </Section> */}
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -113,6 +125,12 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
+  textblock:{
+    marginTop: 32,
+    marginBottom: 32,
+    paddingVertical: 24,
+    paddingBottom: 50
+  }
 });
 
 export default App;
