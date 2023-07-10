@@ -13,6 +13,16 @@ Revisar la configuraciónde build.graddle en NODE_MODULES/react-native-vision-ca
   implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
 ```
 
+## Errores conocidos
+https://github.com/mrousavy/react-native-vision-camera/issues/1514
+https://github.com/software-mansion/react-native-reanimated/pull/3853
+
+## Errores desconocidos
+La ruta que genera para las fotos no existe.
+
+
+# Template docs
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
