@@ -26,6 +26,12 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import {
+  Camera,
+  useCameraDevices,
+  useFrameProcessor,
+} from 'react-native-vision-camera';
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -59,6 +65,12 @@ function Section({children, title}: SectionProps): JSX.Element {
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
+  const devices = useCameraDevices()
+  const device = devices.front
+
+  if (device == null) return <View><Text>Loading camera</Text></View>
+
+
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
@@ -76,7 +88,32 @@ function App(): JSX.Element {
           Welcome To React-Native-Vision-Camera Tutorial
         </Text>
       </View>
+
+      <Section 
+        title="Testing Camera">
+        <Text style={styles.textblock}>Show the QR to scan</Text>
+        <Text style={styles.textblock}> . </Text>
+    
+      </Section>
+
+      <Camera
+        style={StyleSheet.absoluteFill}
+        device={device}
+        isActive={true}
+      />
+
+
+      <Button
+        title="Ready"
+        onPress={() => {
+          console.log('Button Ready pressed');
+        }}
+      />
+
+
     </View>
+     
+
     // <SafeAreaView style={backgroundStyle}>
     //   <StatusBar
     //     barStyle={isDarkMode ? 'light-content' : 'dark-content'}
