@@ -1,3 +1,14 @@
+# NOTAS:
+Ejemplo de implementación de React Native con Vision Camera @mrousavy/react-native-vision-camera
+
+## Requerimientos:
+Cambiar la configuración de gradle.properties en NODE_MODULES/react-native-vision-camera/android
+```shell
+VisionCamera_kotlinVersion=1.6.20
+```
+
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
