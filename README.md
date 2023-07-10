@@ -6,8 +6,12 @@ Cambiar la configuración de gradle.properties en NODE_MODULES/react-native-visi
 ```shell
 VisionCamera_kotlinVersion=1.6.20
 ```
+Revisar la configuraciónde build.graddle en NODE_MODULES/react-native-vision-camera/android que apunte a una distribución existente
 
-
+```shell
+  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.5.2"
+  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
+```
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
