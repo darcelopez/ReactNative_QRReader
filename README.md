@@ -16,6 +16,7 @@ Revisar la configuraciónde build.graddle en NODE_MODULES/react-native-vision-ca
 ## Errores conocidos
 https://github.com/mrousavy/react-native-vision-camera/issues/1514
 https://github.com/software-mansion/react-native-reanimated/pull/3853
+https://github.com/mrousavy/react-native-vision-camera/issues/1281
 
 ## Errores desconocidos
 La ruta que genera para las fotos no existe.
